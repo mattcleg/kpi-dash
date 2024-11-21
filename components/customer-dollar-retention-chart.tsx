@@ -34,7 +34,7 @@ export function CustomerDollarRetentionChart({ data }: CustomerDollarRetentionCh
                 interval={0}
               />
               <YAxis 
-                domain={[90, 100]} 
+                domain={[90, 120]} 
                 tick={{ fontSize: 12 }}
                 tickFormatter={(value) => `${value}%`}
               />

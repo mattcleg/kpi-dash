@@ -58,11 +58,10 @@ async function MainContent() {
         <h2 className="text-2xl font-bold mb-4">Touch Points</h2>
         <div className="grid gap-4 md:grid-cols-2">
           <KPICard
-            title="Recommended Calls/Month"
-            value={kpiData.recommendedCallsPerMonth.recommended.toString()}
-            description="Target number of calls"
+            title="Target Avg Calls/Month Per CSM"
+            value={kpiData.recommendedCallsPerMonth.quarterlyTarget.toString()}
             change={kpiData.recommendedCallsPerMonth.change}
-            changeType="increase"
+            changeType={kpiData.enterpriseSlackRequests.changeType}
             changeFrequency="from last month"
             additionalInfo={{
               label: "This Month vs Previous Month",
@@ -70,20 +69,18 @@ async function MainContent() {
               value: kpiData.recommendedCallsPerMonth.previousMonth.toString(),
               difference: kpiData.recommendedCallsPerMonth.change
             }}
+            quarterlyTarget={kpiData.recommendedCallsPerMonth.quarterlyTarget}
           />
           <KPICard
             title="Enterprise Slack Requests"
-            value={kpiData.enterpriseSlackRequests.newRequests.toString()}
-            description="New requests this week"
+            additionalInfo={{
+              label: "Last Month's Requests",
+              currentValue: kpiData.enterpriseSlackRequests.newRequests.toString(),
+              value: kpiData.enterpriseSlackRequests.lastMonth.toString()
+            }}
             change={kpiData.enterpriseSlackRequests.change}
             changeType={kpiData.enterpriseSlackRequests.changeType}
-            changeFrequency="from last week"
-            additionalInfo={{
-              label: "Last Week's Requests",
-              currentValue: kpiData.enterpriseSlackRequests.newRequests.toString(),
-              value: kpiData.enterpriseSlackRequests.lastWeek.toString(),
-              difference: kpiData.enterpriseSlackRequests.change
-            }}
+            changeFrequency="from last month"
             topChannels={kpiData.enterpriseSlackRequests.topChannels}
           />
         </div>
@@ -97,6 +94,41 @@ async function MainContent() {
           upcomingOnsiteTop5={kpiData.customerOnsiteVisits.upcomingOnsiteTop5}
           totalARR={kpiData.customerOnsiteVisits.totalARR}
           quarterlyTarget={kpiData.customerOnsiteVisits.quarterlyTarget}
+        />
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Customer Success Activities</h2>
+        <div className="grid gap-4 md:grid-cols-3">
+          <SuccessPlansCard
+            inProgress={kpiData.successPlans.inProgress}
+            shared={kpiData.successPlans.shared}
+            totalARR={kpiData.successPlans.totalARR}
+            quarterlyTarget={kpiData.successPlans.quarterlyTarget}
+            completed={kpiData.successPlans.completed}
+          />
+          <EBRsPlanned
+            value={kpiData.ebrsPlanned.value}
+            change={kpiData.ebrsPlanned.change}
+            changeType={kpiData.ebrsPlanned.changeType}
+            upcomingEBRs={kpiData.ebrsPlanned.upcomingEBRs}
+            totalARR={kpiData.ebrsPlanned.totalARR}
+            quarterlyTarget={kpiData.ebrsPlanned.quarterlyTarget}
+            completed={kpiData.ebrsPlanned.completed}
+          />
+          <CustomerAdoptionChecks
+            completed={kpiData.customerAdoptionChecks.completed}
+            quarterlyTarget={kpiData.customerAdoptionChecks.quarterlyTarget}
+            totalARR={kpiData.customerAdoptionChecks.totalARR}
+          />
+        </div>
+      </section>
+
+      <section>
+        <CustomerLaunchesCard
+          lastMonth={kpiData.customerLaunches.lastMonth}
+          thisMonth={kpiData.customerLaunches.thisMonth}
+          totalARR={kpiData.customerLaunches.totalARR}
         />
       </section>
 
@@ -128,40 +160,6 @@ async function MainContent() {
         </div>
       </section>
 
-      <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Customer Success Activities</h2>
-        <div className="grid gap-4 md:grid-cols-3">
-          <EBRsPlanned
-            value={kpiData.ebrsPlanned.value}
-            change={kpiData.ebrsPlanned.change}
-            changeType={kpiData.ebrsPlanned.changeType}
-            upcomingEBRs={kpiData.ebrsPlanned.upcomingEBRs}
-            totalARR={kpiData.ebrsPlanned.totalARR}
-            quarterlyTarget={kpiData.ebrsPlanned.quarterlyTarget}
-            completed={kpiData.ebrsPlanned.completed}
-          />
-          <SuccessPlansCard
-            inProgress={kpiData.successPlans.inProgress}
-            shared={kpiData.successPlans.shared}
-            totalARR={kpiData.successPlans.totalARR}
-            quarterlyTarget={kpiData.successPlans.quarterlyTarget}
-            completed={kpiData.successPlans.completed}
-          />
-          <CustomerAdoptionChecks
-            completed={kpiData.customerAdoptionChecks.completed}
-            quarterlyTarget={kpiData.customerAdoptionChecks.quarterlyTarget}
-            totalARR={kpiData.customerAdoptionChecks.totalARR}
-          />
-        </div>
-      </section>
-
-      <section>
-        <CustomerLaunchesCard
-          lastMonth={kpiData.customerLaunches.lastMonth}
-          thisMonth={kpiData.customerLaunches.thisMonth}
-          totalARR={kpiData.customerLaunches.totalARR}
-        />
-      </section>
     </main>
   );
 }

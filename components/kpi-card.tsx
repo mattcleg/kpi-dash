@@ -43,17 +43,6 @@ export function KPICard({
       <CardContent>
         <div className="text-2xl font-bold">{value}</div>
         <p className="text-xs text-muted-foreground">{description}</p>
-        <div className="flex items-center pt-1">
-          {changeType === "increase" ? (
-            <ArrowUpIcon className="h-4 w-4 text-green-500" />
-          ) : (
-            <ArrowDownIcon className="h-4 w-4 text-red-500" />
-          )}
-          <span className={`text-xs font-medium ${changeType === "increase" ? "text-green-500" : "text-red-500"}`}>
-            {change}%
-          </span>
-          <span className="text-xs text-muted-foreground ml-1">{changeFrequency}</span>
-        </div>
         {quarterlyTarget && completed && (
           <div className="mt-2 pt-2 border-t">
             <p className="text-sm font-medium">Quarterly Target: {quarterlyTarget}</p>
@@ -74,13 +63,19 @@ export function KPICard({
                 <span className="text-lg font-bold">{additionalInfo.value}</span>
               </div>
             </div>
-            <div className="flex items-center justify-end mt-1">
-              <span className={`text-sm font-medium ${additionalInfo.difference >= 0 ? "text-green-500" : "text-red-500"}`}>
-                {additionalInfo.difference >= 0 ? "+" : ""}{additionalInfo.difference}%
-              </span>
-            </div>
           </div>
         )}
+        <div className="flex items-center pt-1">
+          {changeType === "increase" ? (
+            <ArrowUpIcon className="h-4 w-4 text-green-500" />
+          ) : (
+            <ArrowDownIcon className="h-4 w-4 text-red-500" />
+          )}
+          <span className={`text-xs font-medium ${changeType === "increase" ? "text-green-500" : "text-red-500"}`}>
+            {change}%
+          </span>
+          <span className="text-xs text-muted-foreground ml-1">{changeFrequency}</span>
+        </div>
         {topChannels && (
           <div className="mt-2 pt-2 border-t">
             <p className="text-sm font-medium mb-1">Most Active Channels:</p>

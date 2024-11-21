@@ -1,14 +1,22 @@
 {
   "customerDollarRetention": {
-    "value": "95%",
-    "change": 1,
-    "changeType": "increase"
+    "value": "98%",
+    "change": 14,
+    "changeType": "decrease"
   },
+  "customerDollarRetentionChart": [
+    { "quarter": "Q1", "year": 2025, "retention": 110 },
+    { "quarter": "Q2", "year": 2025, "retention": 102 },
+    { "quarter": "Q3", "year": 2025, "retention": 112 },
+    { "quarter": "Q4", "year": 2025, "retention": 98 },
+    { "quarter": "Q1", "year": 2026, "retention": 68 }
+  ],
   "recommendedCallsPerMonth": {
-    "recommended": 16,
-    "currentMonth": 16,
-    "previousMonth": 12,
-    "change": 33.33
+    "quarterlyTarget": 20,
+    "completed": 9,
+    "previousMonth": 19,
+    "change": 71,
+    "changeType": "decrease"
   },
   "ebrsPlanned": {
     "value": 15,
@@ -26,11 +34,11 @@
     "completed": 15
   },
   "successPlans": {
-    "inProgress": 8,
-    "shared": 12,
-    "totalARR": 4500000,
-    "quarterlyTarget": 25,
-    "completed": 20
+    "inProgress": 15,
+    "shared": 0,
+    "totalARR": 1120091.56,
+    "quarterlyTarget": 20,
+    "completed": 0
   },
   "conversationsOnV0": {
     "value": 18,
@@ -54,28 +62,24 @@
     "changeType": "increase"
   },
   "customerOnsiteVisits": {
-    "completed": 18,
-    "upcoming": 7,
-    "total": 25,
+    "completed": 3,
+    "upcoming": 1,
+    "total": 4,
     "upcomingOnsiteTop5": [
-      "TechCorp Inc.",
-      "Global Solutions Ltd.",
-      "Innovate Systems",
-      "DataDrive Analytics",
-      "CloudNine Technologies"
+      "Salomon"
     ],
     "totalARR": 5000000,
-    "quarterlyTarget": 30
+    "quarterlyTarget": 5
   },
   "enterpriseSlackRequests": {
-    "lastWeek": 45,
-    "newRequests": 12,
-    "change": 26.67,
-    "changeType": "increase",
+    "lastMonth": 262,
+    "newRequests": 224,
+    "change": 15.64,
+    "changeType": "decrease",
     "topChannels": [
-      "product-feedback",
-      "support-enterprise",
-      "feature-requests"
+      "enterprise-hola",
+      "enterprise-hellofresh",
+      "shared-vaimo-hellyhansen"
     ]
   },
   "customerLaunches": {
@@ -84,15 +88,8 @@
     "totalARR": 3000000
   },
   "customerAdoptionChecks": {
-    "completed": 40,
-    "quarterlyTarget": 50,
+    "completed": 0,
+    "quarterlyTarget": 20,
     "totalARR": 6000000
-  },
-  "customerDollarRetentionChart": [
-    { "quarter": "Q1", "year": 2024, "retention": 94 },
-    { "quarter": "Q2", "year": 2024, "retention": 95 },
-    { "quarter": "Q3", "year": 2024, "retention": 93 },
-    { "quarter": "Q4", "year": 2024, "retention": 96 },
-    { "quarter": "Q1", "year": 2025, "retention": 95 }
-  ]
+  }
 }
