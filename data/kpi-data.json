@@ -19,7 +19,7 @@
     "changeType": "decrease"
   },
   "ebrsPlanned": {
-    "value": 15,
+    "value": 3,
     "change": 3,
     "changeType": "increase",
     "upcomingEBRs": [
@@ -27,8 +27,8 @@
       "LichtBlick"
     ],
     "totalARR": 7500000,
-    "quarterlyTarget": 20,
-    "completed": 15
+    "quarterlyTarget": 5,
+    "completed": 1
   },
   "successPlans": {
     "inProgress": 15,
