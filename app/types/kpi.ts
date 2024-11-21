@@ -11,6 +11,7 @@ interface RecommendedCalls {
   currentMonth: number;
   previousMonth: number;
   change: number;
+  quarterlyTarget: number;
 }
 
 interface EBRsPlanned extends MetricWithChange {
