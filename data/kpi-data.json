@@ -62,13 +62,14 @@
     "changeType": "increase"
   },
   "customerOnsiteVisits": {
-    "completed": 3,
-    "upcoming": 1,
+    "completed": 2,
+    "upcoming": 2,
     "total": 4,
     "upcomingOnsiteTop5": [
-      "Salomon"
+      "Salomon",
+      "Hi3G"
     ],
-    "totalARR": 5000000,
+    "totalARR": 249241.77,
     "quarterlyTarget": 5
   },
   "enterpriseSlackRequests": {

@@ -59,14 +59,14 @@ async function MainContent() {
         <div className="grid gap-4 md:grid-cols-2">
           <KPICard
             title="Target Avg Calls/Month Per CSM"
-            value={kpiData.recommendedCallsPerMonth.quarterlyTarget.toString()}
+            value={String(kpiData.recommendedCallsPerMonth.quarterlyTarget ?? 0)}
             change={kpiData.recommendedCallsPerMonth.change}
-            changeType={kpiData.enterpriseSlackRequests.changeType}
+            changeType={kpiData.recommendedCallsPerMonth.changeType}
             changeFrequency="from last month"
             additionalInfo={{
               label: "This Month vs Previous Month",
-              currentValue: kpiData.recommendedCallsPerMonth.currentMonth.toString(),
-              value: kpiData.recommendedCallsPerMonth.previousMonth.toString(),
+              currentValue: kpiData.recommendedCallsPerMonth.currentMonth,
+              value: kpiData.recommendedCallsPerMonth.previousMonth,
               difference: kpiData.recommendedCallsPerMonth.change
             }}
             quarterlyTarget={kpiData.recommendedCallsPerMonth.quarterlyTarget}
