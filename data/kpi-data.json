@@ -23,11 +23,8 @@
     "change": 3,
     "changeType": "increase",
     "upcomingEBRs": [
-      "Acme Corp",
-      "TechGiant Inc",
-      "InnovateCo",
-      "Global Systems Ltd",
-      "FutureTech Solutions"
+      "Salomon",
+      "LichtBlick"
     ],
     "totalARR": 7500000,
     "quarterlyTarget": 20,
