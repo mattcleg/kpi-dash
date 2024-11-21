@@ -81,9 +81,9 @@
     ]
   },
   "customerLaunches": {
-    "lastMonth": 5,
-    "thisMonth": 7,
-    "totalARR": 3000000
+    "lastMonth": 7,
+    "thisMonth": 5,
+    "totalARR": 380545.30
   },
   "customerAdoptionChecks": {
     "completed": 0,
