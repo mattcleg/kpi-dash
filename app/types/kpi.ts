@@ -1,4 +1,4 @@
-type ChangeType = 'increase' | 'decrease' | 'no change';
+type ChangeType = 'increase' | 'decrease';
 
 interface MetricWithChange {
   value: string | number;
