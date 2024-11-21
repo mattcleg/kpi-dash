@@ -42,7 +42,6 @@ export function KPICard({
       </CardHeader>
       <CardContent>
         <div className="text-2xl font-bold">{value}</div>
-        <p className="text-xs text-muted-foreground">{description}</p>
         {quarterlyTarget && completed && (
           <div className="mt-2 pt-2 border-t">
             <p className="text-sm font-medium">Quarterly Target: {quarterlyTarget}</p>
