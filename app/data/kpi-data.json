@@ -1,0 +1,41 @@
+{
+  "customerDollarRetention": {
+    "value": "94%",
+    "change": 1.5,
+    "changeType": "increase"
+  },
+  "recommendedCallsPerWeek": 4,
+  "ebrsPlanned": {
+    "value": 15,
+    "change": 3,
+    "changeType": "increase"
+  },
+  "conversationsOnV0": {
+    "value": 203,
+    "change": 31,
+    "changeType": "increase"
+  },
+  "previewCommentsTouchpoints": {
+    "value": 92,
+    "change": 8,
+    "changeType": "increase"
+  },
+  "cdnDiscoveryConversations": {
+    "value": 57,
+    "change": 5,
+    "changeType": "increase"
+  },
+  "customerOnsiteVisits": {
+    "completed": 18,
+    "upcoming": 7,
+    "total": 25
+  },
+  "customerDollarRetentionChart": [
+    { "quarter": "Q1", "year": 2023, "retention": 92 },
+    { "quarter": "Q2", "year": 2023, "retention": 93 },
+    { "quarter": "Q3", "year": 2023, "retention": 91 },
+    { "quarter": "Q4", "year": 2023, "retention": 94 },
+    { "quarter": "Q1", "year": 2024, "retention": 95 }
+  ]
+}
+
