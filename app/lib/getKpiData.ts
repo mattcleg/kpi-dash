@@ -2,8 +2,8 @@ import { KPIData } from '../types/kpi';
 
 export async function getKpiData(): Promise<KPIData> {
   try {
-    // Use a relative URL instead of an absolute one
-    const res = await fetch('/api/kpi', { 
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+    const res = await fetch(`${baseUrl}/api/kpi`, { 
       next: { revalidate: 60 },
       headers: {
         'Cache-Control': 'no-cache'
@@ -21,4 +21,3 @@ export async function getKpiData(): Promise<KPIData> {
     throw new Error('Failed to fetch KPI data');
   }
 }
-
