@@ -65,7 +65,7 @@ async function MainContent() {
             changeFrequency="from last month"
             additionalInfo={{
               label: "This Month vs Previous Month",
-              currentValue: kpiData.recommendedCallsPerMonth.currentMonth,
+              currentValue: kpiData.recommendedCallsPerMonth.completed,
               value: kpiData.recommendedCallsPerMonth.previousMonth,
               difference: kpiData.recommendedCallsPerMonth.change
             }}
