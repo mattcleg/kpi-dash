@@ -74,6 +74,8 @@ async function MainContent() {
           />
           <KPICard
             title="Enterprise Slack Requests"
+            description="New requests"
+            value={kpiData.enterpriseSlackRequests.newRequests.toString()}
             additionalInfo={{
               label: "Last Month's Requests",
               currentValue: kpiData.enterpriseSlackRequests.newRequests.toString(),
