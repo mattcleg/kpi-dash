@@ -8,7 +8,7 @@ interface MetricWithChange {
 
 interface RecommendedCalls {
   recommended: number;
-  currentMonth: number;
+  completed: number;
   previousMonth: number;
   change: number;
   quarterlyTarget: number;
