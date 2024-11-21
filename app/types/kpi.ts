@@ -46,9 +46,11 @@ interface CustomerOnsiteVisits {
 }
 
 interface EnterpriseSlackRequests extends MetricWithChange {
-  lastWeek: number;
   newRequests: number;
-  topChannels: string[];
+  lastMonth: number;
+  change: number;
+  changeType: ChangeType;
+  topChannels?: string[];
 }
 
 interface CustomerLaunches {
