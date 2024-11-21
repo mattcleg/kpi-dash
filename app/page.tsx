@@ -77,7 +77,8 @@ async function MainContent() {
             additionalInfo={{
               label: "Last Month's Requests",
               currentValue: kpiData.enterpriseSlackRequests.newRequests.toString(),
-              value: kpiData.enterpriseSlackRequests.lastMonth.toString()
+              value: kpiData.enterpriseSlackRequests.lastMonth.toString(),
+              difference: kpiData.enterpriseSlackRequests.change
             }}
             change={kpiData.enterpriseSlackRequests.change}
             changeType={kpiData.enterpriseSlackRequests.changeType}
