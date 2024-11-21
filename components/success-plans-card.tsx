@@ -26,7 +26,8 @@ export function SuccessPlansCard({
       additionalInfo={{
         label: "Success Plans Breakdown",
         currentValue: inProgress.toString(),
-        value: shared.toString()
+        value: shared.toString(),
+        difference: shared - inProgress
       }}
       totalARR={totalARR}
       quarterlyTarget={quarterlyTarget}
