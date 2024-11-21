@@ -27,7 +27,7 @@ async function MainContent() {
   let kpiData;
   try {
     kpiData = await getKpiData();
-  } catch (error) {
+  } catch (_error) {
     return <div className="container mx-auto px-4 py-8">Error loading KPI data. Please try again later.</div>;
   }
 
