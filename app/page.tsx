@@ -109,7 +109,7 @@ const kpiData = {
   ]
 }
 
-export default function Dashboard() {
+export default function Home() {
   if (!kpiData || !kpiData.customerDollarRetention || !kpiData.recommendedCallsPerMonth) {
     return <div>Error: Missing required data</div>
   }
