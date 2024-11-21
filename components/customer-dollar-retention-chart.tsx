@@ -57,4 +57,3 @@ export function CustomerDollarRetentionChart({ data }: CustomerDollarRetentionCh
     </Card>
   )
 }
-
