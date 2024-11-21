@@ -127,6 +127,7 @@ export default function Dashboard() {
                   change={kpiData.customerDollarRetention.change}
                   changeType={kpiData.customerDollarRetention.changeType}
                   changeFrequency="from last quarter"
+                  isVerified={kpiData.customerDollarRetention.isVerified}
                 />
               </div>
               <div className="lg:col-span-2">

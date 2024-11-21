@@ -18,6 +18,7 @@ interface KPICardProps {
   totalARR?: number
   quarterlyTarget?: number
   completed?: number
+  isVerified: boolean
 }
 
 export function KPICard({ 
