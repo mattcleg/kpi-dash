@@ -38,7 +38,7 @@ async function MainContent() {
           <div className="lg:col-span-1">
             <KPICard
               title="Current Quarter Customer Dollar Retention"
-              value={kpiData.customerDollarRetention.value}
+              value={kpiData.customerDollarRetention.value.toString()}
               description="Current quarter-to-date"
               change={kpiData.customerDollarRetention.change}
               changeType={kpiData.customerDollarRetention.changeType}
