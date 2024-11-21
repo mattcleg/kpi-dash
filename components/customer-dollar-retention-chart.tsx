@@ -39,7 +39,7 @@ export function CustomerDollarRetentionChart({ data }: CustomerDollarRetentionCh
                 tickFormatter={(value) => `${value}%`}
               />
               <Tooltip 
-                formatter={(value) => [`${value}%`, "Retention"]}
+                formatter={(value) => [`${value}%`, "CDR"]}
                 labelFormatter={(label) => `Quarter: ${label}`}
               />
               <Line 
