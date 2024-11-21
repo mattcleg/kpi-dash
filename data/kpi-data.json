@@ -2,7 +2,8 @@
   "customerDollarRetention": {
     "value": "98%",
     "change": 14,
-    "changeType": "decrease"
+    "changeType": "decrease",
+    "isVerified": true
   },
   "customerDollarRetentionChart": [
     { "quarter": "Q1", "year": 2025, "retention": 110 },
@@ -35,7 +36,8 @@
     "shared": 0,
     "totalARR": 1120091.56,
     "quarterlyTarget": 20,
-    "completed": 0
+    "completed": 0,
+    "isVerified": true
   },
   "conversationsOnV0": {
     "value": 18,
@@ -43,7 +45,8 @@
     "changeType": "increase",
     "totalARR": 2000000,
     "quarterlyTarget": 30,
-    "completed": 18
+    "completed": 18,
+    "isVerified": true
   },
   "previewCommentsTouchpoints": {
     "value": 92,
@@ -51,12 +54,14 @@
     "changeType": "increase",
     "totalARR": 3500000,
     "quarterlyTarget": 100,
-    "completed": 92
+    "completed": 92,
+    "isVerified": false
   },
   "cdnDiscoveryConversations": {
     "value": 57,
     "change": 5,
-    "changeType": "increase"
+    "changeType": "increase",
+     "isVerified": false
   },
   "customerOnsiteVisits": {
     "completed": 2,
@@ -67,7 +72,8 @@
       "Hi3G"
     ],
     "totalARR": 249241.77,
-    "quarterlyTarget": 5
+    "quarterlyTarget": 5,
+    "isVerified": true
   },
   "enterpriseSlackRequests": {
     "lastMonth": 262,
@@ -78,16 +84,19 @@
       "enterprise-hola",
       "enterprise-hellofresh",
       "shared-vaimo-hellyhansen"
-    ]
+    ],
+    "isVerified": true
   },
   "customerLaunches": {
     "lastMonth": 7,
     "thisMonth": 5,
-    "totalARR": 380545.30
+    "totalARR": 380545.30,
+    "isVerified": true
   },
   "customerAdoptionChecks": {
     "completed": 0,
     "quarterlyTarget": 20,
-    "totalARR": 0
+    "totalARR": 0,
+    "isVerified": false
   }
 }

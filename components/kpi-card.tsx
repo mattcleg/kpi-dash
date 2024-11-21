@@ -31,7 +31,8 @@ export function KPICard({
   topChannels,
   totalARR,
   quarterlyTarget,
-  completed
+  completed,
+  isVerified
 }: KPICardProps) {
   const percentToTarget = quarterlyTarget && completed ? (completed / quarterlyTarget) * 100 : null
 
@@ -39,6 +40,11 @@ export function KPICard({
     <Card>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <CardTitle className="text-2xl font-semibold leading-none tracking-tight">{title}</CardTitle>
+        {isVerified && (
+          <span className="text-[10px] font-light tracking-wider text-green-500 bg-green-100 px-1 py-0.5 rounded">
+            VERIFIED
+          </span>
+        )}
       </CardHeader>
       <CardContent>
         <div className="text-2xl font-bold">{value}</div>
