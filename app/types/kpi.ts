@@ -4,6 +4,7 @@ interface MetricWithChange {
   value: string | number;
   change: number;
   changeType: ChangeType;
+  isVerified: boolean; 
 }
 
 interface RecommendedCalls {
