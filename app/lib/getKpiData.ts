@@ -2,7 +2,8 @@ import { KPIData } from '../types/kpi';
 
 export async function getKpiData(): Promise<KPIData> {
   try {
-    const res = await fetch('http://localhost:3000/api/kpi', { 
+    // Use a relative URL instead of an absolute one
+    const res = await fetch('/api/kpi', { 
       next: { revalidate: 60 },
       headers: {
         'Cache-Control': 'no-cache'
