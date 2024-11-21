@@ -59,6 +59,7 @@ async function MainContent() {
         <div className="grid gap-4 md:grid-cols-2">
           <KPICard
             title="Target Avg Calls/Month Per CSM"
+            description="Target number of calls"
             value={String(kpiData.recommendedCallsPerMonth.quarterlyTarget ?? 0)}
             change={kpiData.recommendedCallsPerMonth.change}
             changeType={kpiData.recommendedCallsPerMonth.changeType}
