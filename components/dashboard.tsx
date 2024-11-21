@@ -1,12 +1,12 @@
-import { Header } from "./components/header"
-import { KPICard } from "./components/kpi-card"
-import { EBRsPlanned } from "./components/ebrs-planned"
-import { CustomerDollarRetentionChart } from "./components/customer-dollar-retention-chart"
-import { CustomerOnsiteVisits } from "./components/customer-onsite-visits"
-import { SuccessPlansCard } from "./components/success-plans-card"
-import { CustomerLaunchesCard } from "./components/customer-launches-card"
-import { CustomerAdoptionChecks } from "./components/customer-adoption-checks"
-import ErrorBoundary from "./components/error-boundary"
+import { Header } from "./header"
+import { KPICard } from "./kpi-card"
+import { EBRsPlanned } from "./ebrs-planned"
+import { CustomerDollarRetentionChart } from "./customer-dollar-retention-chart"
+import { CustomerOnsiteVisits } from "./customer-onsite-visits"
+import { SuccessPlansCard } from "./success-plans-card"
+import { CustomerLaunchesCard } from "./customer-launches-card"
+import { CustomerAdoptionChecks } from "./customer-adoption-checks"
+import ErrorBoundary from "./error-boundary"
 
 const kpiData = {
   customerDollarRetention: {
