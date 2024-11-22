@@ -17,7 +17,8 @@
     "completed": 9,
     "previousMonth": 19,
     "change": 71,
-    "changeType": "decrease"
+    "changeType": "decrease",
+    "isVerified": true
   },
   "ebrsPlanned": {
     "value": 3,

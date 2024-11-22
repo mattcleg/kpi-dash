@@ -14,6 +14,7 @@ interface RecommendedCalls {
   change: number;
   quarterlyTarget: number;
   changeType: ChangeType;
+  isVerified: boolean;
 }
 
 interface EBRsPlanned extends MetricWithChange {
@@ -44,6 +45,7 @@ interface CustomerOnsiteVisits {
   upcomingOnsiteTop5: string[];
   totalARR: number;
   quarterlyTarget: number;
+  isVerified: boolean;
 }
 
 interface EnterpriseSlackRequests extends MetricWithChange {

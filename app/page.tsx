@@ -43,6 +43,7 @@ async function MainContent() {
               change={kpiData.customerDollarRetention.change}
               changeType={kpiData.customerDollarRetention.changeType}
               changeFrequency="from last quarter"
+              isVerified={kpiData.customerDollarRetention.isVerified}
             />
           </div>
           {kpiData.customerDollarRetentionChart && (
@@ -71,6 +72,7 @@ async function MainContent() {
               difference: kpiData.recommendedCallsPerMonth.change
             }}
             quarterlyTarget={kpiData.recommendedCallsPerMonth.quarterlyTarget}
+            isVerified={kpiData.recommendedCallsPerMonth.isVerified}
           />
           <KPICard
             title="Enterprise Slack Requests"
@@ -86,6 +88,7 @@ async function MainContent() {
             changeType={kpiData.enterpriseSlackRequests.changeType}
             changeFrequency="from last month"
             topChannels={kpiData.enterpriseSlackRequests.topChannels}
+            isVerified={kpiData.enterpriseSlackRequests.isVerified}
           />
         </div>
       </section>
@@ -98,6 +101,7 @@ async function MainContent() {
           upcomingOnsiteTop5={kpiData.customerOnsiteVisits.upcomingOnsiteTop5}
           totalARR={kpiData.customerOnsiteVisits.totalARR}
           quarterlyTarget={kpiData.customerOnsiteVisits.quarterlyTarget}
+          isVerified={kpiData.customerOnsiteVisits.isVerified}
         />
       </section>
 
