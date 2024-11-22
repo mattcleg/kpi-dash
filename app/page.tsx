@@ -151,8 +151,6 @@ async function MainContent() {
             change={kpiData.previewCommentsTouchpoints.change}
             changeType={kpiData.previewCommentsTouchpoints.changeType}
             changeFrequency="this week"
-            quarterlyTarget={kpiData.previewCommentsTouchpoints.quarterlyTarget}
-            completed={kpiData.previewCommentsTouchpoints.completed}
           />
         </div>
       </section>
