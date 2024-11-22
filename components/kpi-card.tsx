@@ -8,16 +8,6 @@ interface KPICardProps {
   change: number
   changeType: "increase" | "decrease"
   changeFrequency: string
-  additionalInfo?: {
-    label: string
-    value: string
-    currentValue: string
-    difference: number
-  }
-  topChannels?: string[]
-  totalARR?: number
-  quarterlyTarget?: number
-  completed?: number
   isVerified: boolean
 }
 
@@ -28,11 +18,6 @@ export function KPICard({
   change, 
   changeType, 
   changeFrequency,
-  additionalInfo,
-  topChannels,
-  totalARR,
-  quarterlyTarget,
-  completed,
   isVerified
 }: KPICardProps) {
   const percentToTarget = quarterlyTarget && completed ? (completed / quarterlyTarget) * 100 : null

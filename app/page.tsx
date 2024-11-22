@@ -149,10 +149,8 @@ async function MainContent() {
             description="Total conversations to date"
             change={kpiData.conversationsOnV0.change}
             changeType={kpiData.conversationsOnV0.changeType}
-            changeFrequency="this week"
-            totalARR={kpiData.conversationsOnV0.totalARR}
-            quarterlyTarget={kpiData.conversationsOnV0.quarterlyTarget}
-            completed={kpiData.conversationsOnV0.completed}
+            changeFrequency="from last quarter"
+            isVerified={kpiData.conversationsOnV0.isVerified}
           />
           <KPICard
             title="Preview Comments Touchpoints"
