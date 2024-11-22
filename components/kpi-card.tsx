@@ -17,6 +17,7 @@ interface KPICardProps {
   changeFrequency: string
   isVerified: boolean
   additionalInfo?: AdditionalInfo
+  topChannels?: string[]
 }
 
 export function KPICard({ 
@@ -27,7 +28,8 @@ export function KPICard({
   changeType, 
   changeFrequency,
   isVerified,
-  additionalInfo
+  additionalInfo,
+  topChannels
 }: KPICardProps) {
   const percentToTarget = quarterlyTarget && completed ? (completed / quarterlyTarget) * 100 : null
 
