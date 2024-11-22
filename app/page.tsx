@@ -120,6 +120,7 @@ async function MainContent() {
             completed={kpiData.customerAdoptionChecks.completed}
             quarterlyTarget={kpiData.customerAdoptionChecks.quarterlyTarget}
             totalARR={kpiData.customerAdoptionChecks.totalARR}
+            isVerified={kpiData.customerAdoptionChecks.isVerified}
           />
         </div>
       </section>

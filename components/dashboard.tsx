@@ -12,7 +12,8 @@ const kpiData = {
   customerDollarRetention: {
     value: "95%",
     change: 1,
-    changeType: "increase" as const
+    changeType: "increase" as const,
+    isVerified: true
   },
   recommendedCallsPerMonth: {
     recommended: 16,
@@ -152,6 +153,7 @@ export default function Dashboard() {
                   value: kpiData.recommendedCallsPerMonth.previousMonth.toString(),
                   difference: kpiData.recommendedCallsPerMonth.change
                 }}
+                isVerified={false}
               />
               <KPICard
                 title="Enterprise Slack Requests"
@@ -167,6 +169,7 @@ export default function Dashboard() {
                   difference: kpiData.enterpriseSlackRequests.change
                 }}
                 topChannels={kpiData.enterpriseSlackRequests.topChannels}
+                isVerified={false}
               />
             </div>
           </section>
@@ -179,6 +182,7 @@ export default function Dashboard() {
               upcomingOnsiteTop5={kpiData.customerOnsiteVisits.upcomingOnsiteTop5}
               totalARR={kpiData.customerOnsiteVisits.totalARR}
               quarterlyTarget={kpiData.customerOnsiteVisits.quarterlyTarget}
+              isVerified={true}
             />
           </section>
 
@@ -195,6 +199,7 @@ export default function Dashboard() {
                 totalARR={kpiData.conversationsOnV0.totalARR}
                 quarterlyTarget={kpiData.conversationsOnV0.quarterlyTarget}
                 completed={kpiData.conversationsOnV0.completed}
+                isVerified={true}
               />
               <KPICard
                 title="Preview Comments Touchpoints"
@@ -206,6 +211,7 @@ export default function Dashboard() {
                 totalARR={kpiData.previewCommentsTouchpoints.totalARR}
                 quarterlyTarget={kpiData.previewCommentsTouchpoints.quarterlyTarget}
                 completed={kpiData.previewCommentsTouchpoints.completed}
+                isVerified={true}
               />
             </div>
           </section>
@@ -233,6 +239,7 @@ export default function Dashboard() {
                 completed={kpiData.customerAdoptionChecks.completed}
                 quarterlyTarget={kpiData.customerAdoptionChecks.quarterlyTarget}
                 totalARR={kpiData.customerAdoptionChecks.totalARR}
+                isVerified={true}
               />
             </div>
           </section>
