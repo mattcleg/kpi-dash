@@ -65,13 +65,6 @@ async function MainContent() {
             change={kpiData.recommendedCallsPerMonth.change}
             changeType={kpiData.recommendedCallsPerMonth.changeType}
             changeFrequency="from last month"
-            additionalInfo={{
-              label: "This Month vs Previous Month",
-              currentValue: String(kpiData.recommendedCallsPerMonth.completed),
-              value: String(kpiData.recommendedCallsPerMonth.previousMonth),
-              difference: kpiData.recommendedCallsPerMonth.change
-            }}
-            quarterlyTarget={kpiData.recommendedCallsPerMonth.quarterlyTarget}
             isVerified={kpiData.recommendedCallsPerMonth.isVerified}
           />
           <KPICard
