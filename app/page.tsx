@@ -151,6 +151,7 @@ async function MainContent() {
             change={kpiData.previewCommentsTouchpoints.change}
             changeType={kpiData.previewCommentsTouchpoints.changeType}
             changeFrequency="this week"
+            isVerified={kpiData.previewCommentsTouchpoints.isVerified}
           />
         </div>
       </section>
