@@ -43,7 +43,6 @@ async function MainContent() {
               change={kpiData.customerDollarRetention.change}
               changeType={kpiData.customerDollarRetention.changeType}
               changeFrequency="from last quarter"
-              isVerified={kpiData.customerDollarRetention.isVerified}
             />
           </div>
           {kpiData.customerDollarRetentionChart && (
@@ -65,7 +64,6 @@ async function MainContent() {
             change={kpiData.recommendedCallsPerMonth.change}
             changeType={kpiData.recommendedCallsPerMonth.changeType}
             changeFrequency="from last month"
-            isVerified={kpiData.recommendedCallsPerMonth.isVerified}
           />
           <KPICard
             title="Enterprise Slack Requests"
@@ -80,7 +78,6 @@ async function MainContent() {
             change={kpiData.enterpriseSlackRequests.change}
             changeType={kpiData.enterpriseSlackRequests.changeType}
             changeFrequency="from last month"
-            isVerified={kpiData.enterpriseSlackRequests.isVerified}
           />
         </div>
       </section>
@@ -93,7 +90,6 @@ async function MainContent() {
           upcomingOnsiteTop5={kpiData.customerOnsiteVisits.upcomingOnsiteTop5}
           totalARR={kpiData.customerOnsiteVisits.totalARR}
           quarterlyTarget={kpiData.customerOnsiteVisits.quarterlyTarget}
-          isVerified={kpiData.customerOnsiteVisits.isVerified}
         />
       </section>
 
@@ -120,7 +116,6 @@ async function MainContent() {
             completed={kpiData.customerAdoptionChecks.completed}
             quarterlyTarget={kpiData.customerAdoptionChecks.quarterlyTarget}
             totalARR={kpiData.customerAdoptionChecks.totalARR}
-            isVerified={kpiData.customerAdoptionChecks.isVerified}
           />
         </div>
       </section>
@@ -143,7 +138,6 @@ async function MainContent() {
             change={kpiData.conversationsOnV0.change}
             changeType={kpiData.conversationsOnV0.changeType}
             changeFrequency="from last quarter"
-            isVerified={kpiData.conversationsOnV0.isVerified}
           />
           <KPICard
             title="Preview Comments Touchpoints"
@@ -152,7 +146,6 @@ async function MainContent() {
             change={kpiData.previewCommentsTouchpoints.change}
             changeType={kpiData.previewCommentsTouchpoints.changeType}
             changeFrequency="this week"
-            isVerified={kpiData.previewCommentsTouchpoints.isVerified}
           />
         </div>
       </section>
