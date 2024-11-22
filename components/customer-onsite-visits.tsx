@@ -7,6 +7,7 @@ interface CustomerOnsiteVisitsProps {
   upcomingOnsiteTop5: string[]
   totalARR: number
   quarterlyTarget: number
+  isVerified: boolean
 }
 
 export function CustomerOnsiteVisits({ 
