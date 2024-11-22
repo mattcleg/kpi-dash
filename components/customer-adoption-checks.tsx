@@ -4,6 +4,7 @@ interface CustomerAdoptionChecksProps {
   completed: number
   quarterlyTarget: number
   totalARR: number
+  isVerified: boolean
 }
 
 export function CustomerAdoptionChecks({ 
