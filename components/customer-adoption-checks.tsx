@@ -16,9 +16,6 @@ export function CustomerAdoptionChecks({
       title="Customer Adoption Checks"
       value={completed.toString()}
       description="Completed adoption checks"
-      change={0}
-      changeType="increase"
-      changeFrequency="No change"
       totalARR={totalARR}
       quarterlyTarget={quarterlyTarget}
       completed={completed}
