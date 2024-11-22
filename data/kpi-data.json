@@ -2,7 +2,6 @@
   "customerDollarRetention": {
     "value": "98%",
     "change": 14,
-    "changeType": "decrease"
   },
   "customerDollarRetentionChart": [
     { "quarter": "Q1", "year": 2025, "retention": 110 },
@@ -16,12 +15,10 @@
     "completed": 9,
     "previousMonth": 19,
     "change": 71,
-    "changeType": "decrease"
   },
   "ebrsPlanned": {
     "value": 3,
     "change": 3,
-    "changeType": "increase",
     "upcomingEBRs": [
       "Salomon",
       "LichtBlick"
@@ -40,7 +37,6 @@
   "conversationsOnV0": {
     "value": 18,
     "change": 31,
-    "changeType": "increase",
     "totalARR": 2000000,
     "quarterlyTarget": 30,
     "completed": 18
@@ -48,7 +44,6 @@
   "previewCommentsTouchpoints": {
     "value": 92,
     "change": 8,
-    "changeType": "increase",
     "totalARR": 3500000,
     "quarterlyTarget": 100,
     "completed": 92
@@ -56,7 +51,6 @@
   "cdnDiscoveryConversations": {
     "value": 57,
     "change": 5,
-    "changeType": "increase"
   },
   "customerOnsiteVisits": {
     "completed": 2,
@@ -73,7 +67,6 @@
     "lastMonth": 262,
     "newRequests": 224,
     "change": 15.64,
-    "changeType": "decrease",
     "topChannels": [
       "enterprise-hola",
       "enterprise-hellofresh",

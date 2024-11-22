@@ -65,7 +65,6 @@ async function MainContent() {
               label: "Last Month's Requests",
               currentValue: kpiData.recommendedCallsPerMonth.completed.toString(),
               value: kpiData.recommendedCallsPerMonth.previousMonth.toString(),
-              difference: kpiData.recommendedCallsPerMonth.change
             }}
           />
           <KPICard
@@ -76,7 +75,6 @@ async function MainContent() {
               label: "Last Month's Requests",
               currentValue: kpiData.enterpriseSlackRequests.newRequests.toString(),
               value: kpiData.enterpriseSlackRequests.lastMonth.toString(),
-              difference: kpiData.enterpriseSlackRequests.change
             }}
           />
         </div>
@@ -135,17 +133,11 @@ async function MainContent() {
             title="Conversations on v0"
             value={kpiData.conversationsOnV0.value.toString()}
             description="Total conversations to date"
-            change={kpiData.conversationsOnV0.change}
-            changeType={kpiData.conversationsOnV0.changeType}
-            changeFrequency="from last quarter"
           />
           <KPICard
             title="Preview Comments Touchpoints"
             value={kpiData.previewCommentsTouchpoints.value.toString()}
             description="Current number of touchpoints"
-            change={kpiData.previewCommentsTouchpoints.change}
-            changeType={kpiData.previewCommentsTouchpoints.changeType}
-            changeFrequency="this week"
           />
         </div>
       </section>

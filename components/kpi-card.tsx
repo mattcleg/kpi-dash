@@ -5,16 +5,12 @@ interface AdditionalInfo {
   label: string;
   currentValue: string;
   value: string;
-  difference: number; // Adjust the type as necessary
 }
 
 interface KPICardProps {
   title: string
   value: string
   description: string
-  change: number
-  changeType: "increase" | "decrease"
-  changeFrequency: string
   additionalInfo?: AdditionalInfo
   topChannels?: string[]
   quarterlyTarget?: number;
@@ -26,9 +22,6 @@ export function KPICard({
   title, 
   value, 
   description, 
-  change, 
-  changeType, 
-  changeFrequency,
   additionalInfo,
   topChannels,
   quarterlyTarget,
