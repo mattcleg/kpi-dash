@@ -80,7 +80,6 @@ async function MainContent() {
             change={kpiData.enterpriseSlackRequests.change}
             changeType={kpiData.enterpriseSlackRequests.changeType}
             changeFrequency="from last month"
-            topChannels={kpiData.enterpriseSlackRequests.topChannels}
             isVerified={kpiData.enterpriseSlackRequests.isVerified}
           />
         </div>
