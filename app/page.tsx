@@ -41,9 +41,6 @@ async function MainContent() {
               title="Current Quarter Customer Dollar Retention"
               value={kpiData.customerDollarRetention.value.toString()}
               description="Current quarter-to-date"
-              change={kpiData.customerDollarRetention.change}
-              changeType={kpiData.customerDollarRetention.changeType}
-              changeFrequency="from last quarter"
             />
           </div>
           {kpiData.customerDollarRetentionChart && (
