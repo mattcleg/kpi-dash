@@ -2,14 +2,12 @@ type ChangeType = 'increase' | 'decrease';
 
 interface MetricWithChange {
   value: string | number;
-  change: number;
 }
 
 interface RecommendedCalls {
   recommended: number;
   completed: number;
   previousMonth: number;
-  change: number;
   quarterlyTarget: number;
 }
 
@@ -46,7 +44,6 @@ interface CustomerOnsiteVisits {
 interface EnterpriseSlackRequests extends MetricWithChange {
   newRequests: number;
   lastMonth: number;
-  change: number;
   topChannels?: string[];
 }
 

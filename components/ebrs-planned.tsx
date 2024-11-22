@@ -3,7 +3,6 @@ import { ArrowUpIcon } from 'lucide-react'
 
 interface EBRsPlannedProps {
   value: number
-  change: number
   upcomingEBRs: string[]
   totalARR: number
   quarterlyTarget: number
@@ -12,7 +11,6 @@ interface EBRsPlannedProps {
 
 export function EBRsPlanned({ 
   value, 
-  change, 
   upcomingEBRs, 
   totalARR,
   quarterlyTarget,

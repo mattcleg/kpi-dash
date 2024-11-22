@@ -103,8 +103,6 @@ async function MainContent() {
           />
           <EBRsPlanned
             value={Number(kpiData.ebrsPlanned.value)}
-            change={kpiData.ebrsPlanned.change}
-            changeType={kpiData.ebrsPlanned.changeType}
             upcomingEBRs={kpiData.ebrsPlanned.upcomingEBRs}
             totalARR={kpiData.ebrsPlanned.totalARR}
             quarterlyTarget={kpiData.ebrsPlanned.quarterlyTarget}
