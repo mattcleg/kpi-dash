@@ -20,14 +20,10 @@ export function SuccessPlansCard({
       title="Success Plans"
       value={`${inProgress} / ${shared}`}
       description="In Progress / Shared"
-      change={0}
-      changeType="increase"
-      changeFrequency="No change"
       additionalInfo={{
         label: "Success Plans Breakdown",
         currentValue: inProgress.toString(),
         value: shared.toString(),
-        difference: shared - inProgress
       }}
       totalARR={totalARR}
       quarterlyTarget={quarterlyTarget}
