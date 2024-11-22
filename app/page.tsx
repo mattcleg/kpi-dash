@@ -52,7 +52,6 @@ async function MainContent() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Touch Points</h2>
         <div className="grid gap-4 md:grid-cols-2">
           <KPICard
             title="Target Avg Calls/Month Per CSM"
@@ -89,7 +88,6 @@ async function MainContent() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Customer Success Activities</h2>
         <div className="grid gap-4 md:grid-cols-3">
           <SuccessPlansCard
             inProgress={kpiData.successPlans.inProgress}
@@ -119,22 +117,6 @@ async function MainContent() {
           thisMonth={kpiData.customerLaunches.thisMonth}
           totalARR={kpiData.customerLaunches.totalARR}
         />
-      </section>
-
-      <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Additional KPIs</h2>
-        <div className="grid gap-4 md:grid-cols-2">
-          <KPICard
-            title="Conversations on v0"
-            value={kpiData.conversationsOnV0.value.toString()}
-            description="Total conversations to date"
-          />
-          <KPICard
-            title="Preview Comments Touchpoints"
-            value={kpiData.previewCommentsTouchpoints.value.toString()}
-            description="Current number of touchpoints"
-          />
-        </div>
       </section>
 
     </main>

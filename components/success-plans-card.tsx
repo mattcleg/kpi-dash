@@ -18,12 +18,10 @@ export function SuccessPlansCard({
   return (
     <KPICard
       title="Success Plans"
-      value={`${inProgress} / ${shared}`}
       description="In Progress / Shared"
       additionalInfo={{
-        label: "Success Plans Breakdown",
+        label: "In progress / Shared",
         currentValue: inProgress.toString(),
-        value: shared.toString(),
       }}
       totalARR={totalARR}
       quarterlyTarget={quarterlyTarget}
