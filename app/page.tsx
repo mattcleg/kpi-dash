@@ -8,17 +8,10 @@ import { CustomerLaunchesCard } from "../components/customer-launches-card"
 import { CustomerAdoptionChecks } from "../components/customer-adoption-checks"
 import ErrorBoundary from "../components/error-boundary"
 import { getKpiData } from "./lib/getKpiData"
-import { useFeatureFlag } from "./hooks/useFeatureFlags"
 import { Suspense } from 'react'
 
 export default async function Home() {
-
-  const showCustomerDollarRetention = useFeatureFlag('showCustomerDollarRetention');
-  const showEnterpriseSlackRequests = useFeatureFlag('showEnterpriseSlackRequests');
-  const showCustomerOnsiteVisits = useFeatureFlag('showCustomerOnsiteVisits');
-  const showCustomerSuccessActivities = useFeatureFlag('showCustomerSuccessActivities');
-
-
+  
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-background">
@@ -31,7 +24,7 @@ export default async function Home() {
   )
 }
 
-async function MainContent(showCustomerDollarRetention) {
+async function MainContent() {
   let kpiData;
   try {
     kpiData = await getKpiData();
@@ -41,8 +34,6 @@ async function MainContent(showCustomerDollarRetention) {
 
   return (
     <main className="container mx-auto px-4 py-8">
-      
-      {showCustomerDollarRetention && (
       <section className="mb-8">
         <div className="grid gap-4 lg:grid-cols-3">
           <div className="lg:col-span-1">
@@ -62,10 +53,8 @@ async function MainContent(showCustomerDollarRetention) {
           )}
         </div>
       </section>
-  
-          )}
 
-
+      {/* Rest of the component remains unchanged */}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Touch Points</h2>
         <div className="grid gap-4 md:grid-cols-2">
