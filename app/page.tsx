@@ -54,7 +54,6 @@ async function MainContent() {
         </div>
       </section>
 
-      {/* Rest of the component remains unchanged */}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Touch Points</h2>
         <div className="grid gap-4 md:grid-cols-2">
@@ -62,9 +61,12 @@ async function MainContent() {
             title="Target Avg Calls/Month Per CSM"
             description="Target number of calls"
             value={String(kpiData.recommendedCallsPerMonth.quarterlyTarget ?? 0)}
-            change={kpiData.recommendedCallsPerMonth.change}
-            changeType={kpiData.recommendedCallsPerMonth.changeType}
-            changeFrequency="from last month"
+            additionalInfo={{
+              label: "Last Month's Requests",
+              currentValue: kpiData.recommendedCallsPerMonth.completed.toString(),
+              value: kpiData.recommendedCallsPerMonth.previousMonth.toString(),
+              difference: kpiData.recommendedCallsPerMonth.change
+            }}
           />
           <KPICard
             title="Enterprise Slack Requests"
@@ -76,9 +78,6 @@ async function MainContent() {
               value: kpiData.enterpriseSlackRequests.lastMonth.toString(),
               difference: kpiData.enterpriseSlackRequests.change
             }}
-            change={kpiData.enterpriseSlackRequests.change}
-            changeType={kpiData.enterpriseSlackRequests.changeType}
-            changeFrequency="from last month"
           />
         </div>
       </section>

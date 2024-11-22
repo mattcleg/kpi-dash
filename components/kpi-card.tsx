@@ -66,17 +66,7 @@ export function KPICard({
             </div>
           </div>
         )}
-        <div className="flex items-center pt-1">
-          {changeType === "increase" ? (
-            <ArrowUpIcon className="h-4 w-4 text-green-500" />
-          ) : (
-            <ArrowDownIcon className="h-4 w-4 text-red-500" />
-          )}
-          <span className={`text-xs font-medium ${changeType === "increase" ? "text-green-500" : "text-red-500"}`}>
-            {change}%
-          </span>
-          <span className="text-xs text-muted-foreground ml-1">{changeFrequency}</span>
-        </div>
+
         {topChannels && (
           <div className="mt-2 pt-2 border-t">
             <p className="text-sm font-medium mb-1">Most Active Channels:</p>
