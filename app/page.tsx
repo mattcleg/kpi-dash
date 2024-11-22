@@ -151,7 +151,6 @@ async function MainContent() {
             change={kpiData.previewCommentsTouchpoints.change}
             changeType={kpiData.previewCommentsTouchpoints.changeType}
             changeFrequency="this week"
-            totalARR={kpiData.previewCommentsTouchpoints.totalARR}
             quarterlyTarget={kpiData.previewCommentsTouchpoints.quarterlyTarget}
             completed={kpiData.previewCommentsTouchpoints.completed}
           />
