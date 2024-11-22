@@ -1,6 +1,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowDownIcon, ArrowUpIcon } from 'lucide-react'
 
+interface AdditionalInfo {
+  label: string;
+  currentValue: string;
+  value: string;
+  difference: number; // Adjust the type as necessary
+}
+
 interface KPICardProps {
   title: string
   value: string
@@ -9,6 +16,7 @@ interface KPICardProps {
   changeType: "increase" | "decrease"
   changeFrequency: string
   isVerified: boolean
+  additionalInfo?: AdditionalInfo
 }
 
 export function KPICard({ 
@@ -18,7 +26,8 @@ export function KPICard({
   change, 
   changeType, 
   changeFrequency,
-  isVerified
+  isVerified,
+  additionalInfo
 }: KPICardProps) {
   const percentToTarget = quarterlyTarget && completed ? (completed / quarterlyTarget) * 100 : null
 
