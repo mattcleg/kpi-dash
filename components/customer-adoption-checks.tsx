@@ -4,14 +4,12 @@ interface CustomerAdoptionChecksProps {
   completed: number
   quarterlyTarget: number
   totalARR: number
-  isVerified: boolean
 }
 
 export function CustomerAdoptionChecks({ 
   completed, 
   quarterlyTarget,
-  totalARR,
-  isVerified
+  totalARR
 }: CustomerAdoptionChecksProps) {
   return (
     <KPICard
@@ -24,7 +22,6 @@ export function CustomerAdoptionChecks({
       totalARR={totalARR}
       quarterlyTarget={quarterlyTarget}
       completed={completed}
-      isVerified={isVerified}
     />
   )
 }
