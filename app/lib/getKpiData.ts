@@ -1,23 +1,14 @@
-import { KPIData } from '../types/kpi';
+import path from 'path'
+import { promises as fs } from 'fs'
 
-export async function getKpiData(): Promise<KPIData> {
+export async function getKpiData() {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
-    const res = await fetch(`${baseUrl}/api/kpi`, { 
-      next: { revalidate: 60 },
-      headers: {
-        'Cache-Control': 'no-cache'
-      }
-    });
-    
-    if (!res.ok) {
-      throw new Error(`HTTP error! status: ${res.status}`);
-    }
-
-    const data = await res.json();
-    return data as KPIData;
+    const jsonDirectory = path.join(process.cwd(), 'app/data')
+    const fileContents = await fs.readFile(jsonDirectory + '/kpi-data.json', 'utf8')
+    return JSON.parse(fileContents)
   } catch (error) {
-    console.error('Error fetching KPI data:', error);
-    throw new Error('Failed to fetch KPI data');
+    console.error('Error reading KPI data:', error)
+    throw new Error('Failed to load KPI data')
   }
 }
+
