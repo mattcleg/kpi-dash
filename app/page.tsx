@@ -5,7 +5,6 @@ import { ClientCustomerDollarRetentionChart } from "../components/client-custome
 import { CustomerOnsiteVisits } from "../components/customer-onsite-visits"
 import { SuccessPlansCard } from "../components/success-plans-card"
 import { CustomerLaunchesCard } from "../components/customer-launches-card"
-import { CustomerAdoptionChecks } from "../components/customer-adoption-checks"
 import ErrorBoundary from "../components/error-boundary"
 import { getKpiData } from "./lib/getKpiData"
 import { Suspense } from 'react'
@@ -15,12 +14,31 @@ export default async function Home() {
     <ErrorBoundary>
       <div className="min-h-screen bg-background">
         <Header />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<LoadingIndicator />}>
           <MainContent />
         </Suspense>
       </div>
     </ErrorBoundary>
   )
+}
+
+function LoadingIndicator() {
+  return (
+    <div className="flex items-center justify-center h-screen">
+      <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
+    </div>
+  );
+}
+
+function ErrorDisplay({ message }: { message: string }) {
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+        <strong className="font-bold">Error!</strong>
+        <span className="block sm:inline"> {message}</span>
+      </div>
+    </div>
+  );
 }
 
 async function MainContent() {
@@ -29,25 +47,11 @@ async function MainContent() {
     kpiData = await getKpiData();
   } catch (error) {
     console.error('Error fetching KPI data:', error);
-    return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-          <strong className="font-bold">Error!</strong>
-          <span className="block sm:inline"> Unable to load KPI data. Please try again later.</span>
-        </div>
-      </div>
-    );
+    return <ErrorDisplay message={`Unable to load KPI data: ${error instanceof Error ? error.message : 'Unknown error'}`} />;
   }
 
   if (!kpiData) {
-    return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500 mx-auto"></div>
-          <p className="mt-4 text-xl font-semibold">Loading KPI data...</p>
-        </div>
-      </div>
-    );
+    return <ErrorDisplay message="No KPI data available" />;
   }
 
   return (
