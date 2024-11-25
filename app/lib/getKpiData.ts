@@ -1,14 +1,13 @@
-import path from 'path'
-import { promises as fs } from 'fs'
-
 export async function getKpiData() {
   try {
-    const jsonDirectory = path.join(process.cwd(), 'app/data')
-    const fileContents = await fs.readFile(jsonDirectory + '/kpi-data.json', 'utf8')
-    return JSON.parse(fileContents)
+    const kpiDataString = process.env.KPI_DATA;
+    if (!kpiDataString) {
+      throw new Error('KPI_DATA environment variable is not set');
+    }
+    return JSON.parse(kpiDataString);
   } catch (error) {
-    console.error('Error reading KPI data:', error)
-    throw new Error('Failed to load KPI data')
+    console.error('Error reading KPI data:', error);
+    throw new Error('Failed to load KPI data');
   }
 }
 
