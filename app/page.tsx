@@ -77,18 +77,7 @@ async function MainContent() {
       </section>
 
       <section className="mb-8">
-        <CustomerOnsiteVisits
-          completed={kpiData.customerOnsiteVisits.completed}
-          upcoming={kpiData.customerOnsiteVisits.upcoming}
-          total={kpiData.customerOnsiteVisits.total}
-          upcomingOnsiteTop5={kpiData.customerOnsiteVisits.upcomingOnsiteTop5}
-          totalARR={kpiData.customerOnsiteVisits.totalARR}
-          quarterlyTarget={kpiData.customerOnsiteVisits.quarterlyTarget}
-        />
-      </section>
-
-      <section className="mb-8">
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2">
           <SuccessPlansCard
             inProgress={kpiData.successPlans.inProgress}
             shared={kpiData.successPlans.shared}
@@ -103,13 +92,20 @@ async function MainContent() {
             quarterlyTarget={kpiData.ebrsPlanned.quarterlyTarget}
             completed={kpiData.ebrsPlanned.completed}
           />
-          <CustomerAdoptionChecks
-            completed={kpiData.customerAdoptionChecks.completed}
-            quarterlyTarget={kpiData.customerAdoptionChecks.quarterlyTarget}
-            totalARR={kpiData.customerAdoptionChecks.totalARR}
-          />
         </div>
       </section>
+      
+      <section className="mb-8">
+        <CustomerOnsiteVisits
+          completed={kpiData.customerOnsiteVisits.completed}
+          upcoming={kpiData.customerOnsiteVisits.upcoming}
+          total={kpiData.customerOnsiteVisits.total}
+          upcomingOnsiteTop5={kpiData.customerOnsiteVisits.upcomingOnsiteTop5}
+          totalARR={kpiData.customerOnsiteVisits.totalARR}
+          quarterlyTarget={kpiData.customerOnsiteVisits.quarterlyTarget}
+        />
+      </section>
+
 
       <section>
         <CustomerLaunchesCard

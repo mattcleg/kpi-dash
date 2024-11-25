@@ -4,10 +4,12 @@ import { ArrowDownIcon, ArrowUpIcon } from 'lucide-react'
 interface AdditionalInfo {
   label: string;
   currentValue: string;
+  value: string;
 }
 
 interface KPICardProps {
   title: string
+  value: string
   description: string
   additionalInfo?: AdditionalInfo
   topChannels?: string[]
