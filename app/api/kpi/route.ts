@@ -5,7 +5,7 @@ import { promises as fs } from 'fs';
 export async function GET() {
   try {
     // Get the path of the json file
-    const jsonDirectory = path.join(process.cwd(), 'data');
+    const jsonDirectory = path.join(process.cwd(), 'app/data');
     // Read the json file
     const fileContents = await fs.readFile(jsonDirectory + '/kpi-data.json', 'utf8');
     // Parse the data as json
