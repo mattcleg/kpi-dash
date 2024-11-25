@@ -59,10 +59,6 @@ async function MainContent() {
               title="Current Quarter Customer Dollar Retention"
               value={kpiData.customerDollarRetention.value.toString()}
               description="Current quarter-to-date"
-              change={kpiData.customerDollarRetention.change}
-              changeType={kpiData.customerDollarRetention.changeType}
-              changeFrequency="from last quarter"
-              isVerified={kpiData.customerDollarRetention.isVerified}
             />
           </div>
           {kpiData.customerDollarRetentionChart && (
@@ -83,12 +79,7 @@ async function MainContent() {
               label: "Last Month's Requests",
               currentValue: kpiData.recommendedCallsPerMonth.completed.toString(),
               value: kpiData.recommendedCallsPerMonth.previousMonth.toString(),
-              difference: kpiData.recommendedCallsPerMonth.change
             }}
-            change={kpiData.recommendedCallsPerMonth.change}
-            changeType={kpiData.recommendedCallsPerMonth.changeType}
-            changeFrequency="from last month"
-            isVerified={kpiData.recommendedCallsPerMonth.isVerified}
           />
           <KPICard
             title="Enterprise Slack Requests"
@@ -98,13 +89,8 @@ async function MainContent() {
               label: "Last Month's Requests",
               currentValue: kpiData.enterpriseSlackRequests.newRequests.toString(),
               value: kpiData.enterpriseSlackRequests.lastMonth.toString(),
-              difference: kpiData.enterpriseSlackRequests.change
             }}
-            change={kpiData.enterpriseSlackRequests.change}
-            changeType={kpiData.enterpriseSlackRequests.changeType}
-            changeFrequency="from last month"
             topChannels={kpiData.enterpriseSlackRequests.topChannels}
-            isVerified={kpiData.enterpriseSlackRequests.isVerified}
           />
         </div>
       </section>
@@ -117,17 +103,13 @@ async function MainContent() {
             totalARR={kpiData.successPlans.totalARR}
             quarterlyTarget={kpiData.successPlans.quarterlyTarget}
             completed={kpiData.successPlans.completed}
-            isVerified={kpiData.successPlans.isVerified}
           />
           <EBRsPlanned
             value={Number(kpiData.ebrsPlanned.value)}
-            change={kpiData.ebrsPlanned.change}
-            changeType={kpiData.ebrsPlanned.changeType}
             upcomingEBRs={kpiData.ebrsPlanned.upcomingEBRs}
             totalARR={kpiData.ebrsPlanned.totalARR}
             quarterlyTarget={kpiData.ebrsPlanned.quarterlyTarget}
             completed={kpiData.ebrsPlanned.completed}
-            isVerified={kpiData.ebrsPlanned.isVerified}
           />
         </div>
       </section>
@@ -140,7 +122,6 @@ async function MainContent() {
           upcomingOnsiteTop5={kpiData.customerOnsiteVisits.upcomingOnsiteTop5}
           totalARR={kpiData.customerOnsiteVisits.totalARR}
           quarterlyTarget={kpiData.customerOnsiteVisits.quarterlyTarget}
-          isVerified={kpiData.customerOnsiteVisits.isVerified}
         />
       </section>
 
@@ -149,7 +130,6 @@ async function MainContent() {
           lastMonth={kpiData.customerLaunches.lastMonth}
           thisMonth={kpiData.customerLaunches.thisMonth}
           totalARR={kpiData.customerLaunches.totalARR}
-          isVerified={kpiData.customerLaunches.isVerified}
         />
       </section>
     </main>
